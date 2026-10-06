@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мастер Мария — парикмахерские услуги</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+    /* Шапка */
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 22px; font-weight: bold; }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+    .nav a:hover { color: #ffb143; }
+
+    /* Главный блок */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+    .btn {
+      display: inline-block;
+      background: #ff9500;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #ffb143;
+      transform: translateY(-2px);
+    }
+
+    /* О себе */
+    .about {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .about img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .about h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    .about p { color: #555; margin-bottom: 12px; }
+
+    /* Услуги */
+    .services {
+      background: #f7f7f9;
+      padding: 80px 0;
+    }
+    .services h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      padding: 30px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .card .price {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ff9500;
+      margin: 12px 0;
+    }
+    .card p { color: #666; font-size: 15px; }
+
+    /* Контакты */
+    .contact {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .contact h2 { font-size: 32px; margin-bottom: 16px; }
+    .contact p { color: #555; margin-bottom: 24px; }
+    .contact .btn { font-size: 18px; }
+
+    /* Подвал */
+    footer {
+      background: #1a1a2e;
+      color: #999;
+      padding: 24px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Мобильная версия */
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .nav a { margin-left: 12px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">Мастер Мария</div>
+      <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+<section class="hero">
+    <div class="container">
+      <h1>Парикмахерские услуги с выездом на дом</h1>
+      <p>Быстро, качественно и по доступной цене</p>
+      <a href="#contact" class="btn">Записаться</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <img src="https://picsum.photos/seed/hair/600/400" alt="Мастер за работой">
+      <div>
+        <h2>Обо мне</h2>
+        <p>Меня зовут Мария, я парикмахер с опытом более 8 лет. Работаю с любыми типами волос, подбираю индивидуальный уход.</p>
+        <p>Приезжаю к вам домой со всем необходимым оборудованием. Работаю ежедневно с 9:00 до 21:00.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Услуги</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Стрижка</h3>
+          <div class="price">1 500 ₽</div>
+          <p>Женская или мужская стрижка любой сложности</p>
+        </div>
+        <div class="card">
+          <h3>Окрашивание</h3>
+          <div class="price">3 500 ₽</div>
+          <p>Однотонное или сложное окрашивание, тонирование</p>
+        </div>
+        <div class="card">
+          <h3>Укладка</h3>
+          <div class="price">1 000 ₽</div>
+          <p>Повседневная или праздничная укладка</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Запишитесь на приём</h2>
+      <p>Позвоните или напишите — отвечу быстро</p>
+      <a href="tel:+79990000000" class="btn">+7 999 000-00-00</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2025 Мастер Мария. Все права защищены.
+    </div>
+  </footer>
+
+</body>
+</html>
